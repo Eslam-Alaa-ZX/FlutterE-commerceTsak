@@ -13,6 +13,7 @@ class Login extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(33.0),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const SizedBox(
                 height: 64,
@@ -36,7 +37,24 @@ class Login extends StatelessWidget {
               MyCBtn(
                 color: BTNgreen,
                 txt: "Sign in",
-                onClick: (){},
+                onClick: () {},
+              ),
+              const SizedBox(
+                height: 33,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text("Do not have an account? ",
+                      style: TextStyle(
+                        fontSize: 18,
+                      )),
+                  MyCTxtBtn(
+                    onClick: () {},
+                    color: Colors.black,
+                    txt: "Sign up",
+                  )
+                ],
               ),
             ],
           ),
