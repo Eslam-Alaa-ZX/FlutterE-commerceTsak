@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecommarce_task/shared/constColors.dart';
+import 'package:flutter_ecommarce_task/widgets/c_btn.dart';
 import 'package:flutter_ecommarce_task/widgets/c_text_field.dart';
 
 class Login extends StatelessWidget {
@@ -11,22 +13,30 @@ class Login extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(33.0),
           child: Column(
-            children: const [
-              SizedBox(
+            children: [
+              const SizedBox(
                 height: 64,
               ),
-              MyCustomTextField(
+              const MyCustomTextField(
                 inputType: TextInputType.emailAddress,
                 isPassword: false,
                 hint: "Enter Your Email : ",
               ),
-              SizedBox(
+              const SizedBox(
                 height: 33,
               ),
-              MyCustomTextField(
+              const MyCustomTextField(
                 inputType: TextInputType.text,
                 isPassword: true,
                 hint: "Enter Your Password : ",
+              ),
+              const SizedBox(
+                height: 33,
+              ),
+              MyCBtn(
+                color: BTNgreen,
+                txt: "Sign in",
+                onClick: (){},
               ),
             ],
           ),
