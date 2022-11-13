@@ -62,7 +62,12 @@ class SignUp extends StatelessWidget {
                             fontSize: 18,
                           )),
                       MyCTxtBtn(
-                        onClick: () {},
+                        onClick: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) => const Login()),
+                          );
+                        },
                         color: Colors.black,
                         txt: "Sign in",
                       )

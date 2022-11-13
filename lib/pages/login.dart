@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecommarce_task/pages/sign_up.dart';
 import 'package:flutter_ecommarce_task/shared/constColors.dart';
 import 'package:flutter_ecommarce_task/widgets/c_btn.dart';
 import 'package:flutter_ecommarce_task/widgets/c_text_field.dart';
@@ -52,7 +53,12 @@ class Login extends StatelessWidget {
                           fontSize: 18,
                         )),
                     MyCTxtBtn(
-                      onClick: () {},
+                      onClick: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(builder: (context) => const SignUp()),
+                        );
+                      },
                       color: Colors.black,
                       txt: "Sign up",
                     )
