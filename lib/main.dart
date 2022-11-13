@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecommarce_task/pages/home_page.dart';
 import 'package:flutter_ecommarce_task/pages/login.dart';
 import 'package:flutter_ecommarce_task/pages/sign_up.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SignUp(),
+      home: const HomePage(),
     );
   }
 }
