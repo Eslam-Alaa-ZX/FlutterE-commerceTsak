@@ -55,13 +55,13 @@ class _DetailsState extends State<Details> {
           body: SingleChildScrollView(
             child: Column(
               children: [
-                Image.asset("assets/img/2.webp"),
+                Image.asset(widget.item.path),
                 const SizedBox(
                   height: 11,
                 ),
-                const Text(
-                  "\$ 12.99",
-                  style: TextStyle(fontSize: 20),
+                Text(
+                  "\$ ${widget.item.price}",
+                  style: const TextStyle(fontSize: 20),
                 ),
                 const SizedBox(
                   height: 16,
@@ -115,19 +115,19 @@ class _DetailsState extends State<Details> {
                       width: 66,
                     ),
                     Row(
-                      children: const [
-                        Icon(
+                      children: [
+                        const Icon(
                           Icons.edit_location,
                           size: 26,
                           color: Color.fromARGB(168, 3, 65, 27),
                           // color: Color.fromARGB(255, 186, 30, 30),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 3,
                         ),
                         Text(
-                          "Flower Shop",
-                          style: TextStyle(fontSize: 19),
+                          widget.item.location,
+                          style: const TextStyle(fontSize: 19),
                         ),
                       ],
                     )
