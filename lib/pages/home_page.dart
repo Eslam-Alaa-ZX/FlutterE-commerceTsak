@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommarce_task/models/Items.dart';
+import 'package:flutter_ecommarce_task/pages/check_out.dart';
 import 'package:flutter_ecommarce_task/pages/details.dart';
+import 'package:flutter_ecommarce_task/pages/home_page.dart';
 import 'package:flutter_ecommarce_task/provider/cart.dart';
 import 'package:flutter_ecommarce_task/shared/constColors.dart';
 import 'package:flutter_ecommarce_task/widgets/products_price.dart';
@@ -42,11 +44,25 @@ class HomePage extends StatelessWidget {
                   ListTile(
                       title: const Text("Home"),
                       leading: const Icon(Icons.home),
-                      onTap: () {}),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const HomePage(),
+                          ),
+                        );
+                      }),
                   ListTile(
                       title: const Text("My products"),
                       leading: const Icon(Icons.add_shopping_cart),
-                      onTap: () {}),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const CheckOut(),
+                          ),
+                        );
+                      }),
                   ListTile(
                       title: const Text("About"),
                       leading: const Icon(Icons.help_center),
