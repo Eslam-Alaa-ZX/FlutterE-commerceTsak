@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommarce_task/models/Items.dart';
+import 'package:flutter_ecommarce_task/pages/details.dart';
 
 class HomePage extends StatelessWidget {
 
@@ -108,7 +109,14 @@ class HomePage extends StatelessWidget {
               itemBuilder: (context, index) {
                 return GridTile(
                   child: GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Details(item: items[index]),
+                        ),
+                      );
+                    },
                     child: Stack(
                       children: [
                         Positioned(

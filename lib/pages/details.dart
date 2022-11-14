@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecommarce_task/models/Items.dart';
 
 class Details extends StatefulWidget {
-  const Details({Key? key}) : super(key: key);
+  final Item item;
+
+  const Details({Key? key, required this.item}) : super(key: key);
 
   @override
   State<Details> createState() => _DetailsState();
