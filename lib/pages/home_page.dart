@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ecommarce_task/models/Items.dart';
 import 'package:flutter_ecommarce_task/pages/details.dart';
 import 'package:flutter_ecommarce_task/provider/cart.dart';
+import 'package:flutter_ecommarce_task/shared/constColors.dart';
 import 'package:flutter_ecommarce_task/widgets/products_price.dart';
 import 'package:provider/provider.dart';
 
@@ -65,7 +66,7 @@ class HomePage extends StatelessWidget {
           ),
         ),
         appBar: AppBar(
-          backgroundColor: const Color.fromARGB(255, 76, 141, 95),
+          backgroundColor: appbarGreen,
           title: const Text("Home"),
           actions: const [
             ProductsPrice(),

@@ -5,7 +5,7 @@ class MyCBtn extends StatelessWidget {
   final Color color;
   final String txt;
 
-  MyCBtn(
+  const MyCBtn(
       {Key? key, required this.onClick, required this.color, required this.txt})
       : super(key: key);
 
@@ -32,7 +32,7 @@ class MyCTxtBtn extends StatelessWidget {
   final Color color;
   final String txt;
 
-  MyCTxtBtn(
+  const MyCTxtBtn(
       {Key? key, required this.onClick, required this.color, required this.txt})
       : super(key: key);
 

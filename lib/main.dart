@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecommarce_task/pages/check_out.dart';
 import 'package:flutter_ecommarce_task/pages/details.dart';
 import 'package:flutter_ecommarce_task/pages/home_page.dart';
 import 'package:flutter_ecommarce_task/pages/login.dart';

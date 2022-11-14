@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecommarce_task/pages/check_out.dart';
 import 'package:flutter_ecommarce_task/provider/cart.dart';
 import 'package:provider/provider.dart';
 
@@ -25,7 +26,14 @@ class ProductsPrice extends StatelessWidget {
                     shape: BoxShape.circle)),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const CheckOut(),
+                ),
+              );
+            },
             icon: const Icon(Icons.add_shopping_cart),
           ),
         ],

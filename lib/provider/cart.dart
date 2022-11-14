@@ -11,4 +11,10 @@ class Cart with ChangeNotifier{
     totalPrice+= item.price.round();
     notifyListeners();
   }
+
+  void removeItem(int index){
+    totalPrice-=selectedItems[index].price.round();
+    selectedItems.removeAt(index);
+    notifyListeners();
+  }
 }
