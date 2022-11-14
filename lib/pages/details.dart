@@ -19,7 +19,7 @@ class _DetailsState extends State<Details> {
       child: Scaffold(
           appBar: AppBar(
             backgroundColor: const Color.fromARGB(255, 76, 141, 95),
-            title: const Text("Home"),
+            title: const Text("Details"),
             actions: [
               Row(
                 children: [
