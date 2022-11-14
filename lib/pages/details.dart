@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommarce_task/models/Items.dart';
+import 'package:flutter_ecommarce_task/provider/cart.dart';
+import 'package:provider/provider.dart';
 
 class Details extends StatefulWidget {
   final Item item;
@@ -15,41 +17,40 @@ class _DetailsState extends State<Details> {
 
   @override
   Widget build(BuildContext context) {
+    final data=Provider.of<Cart>(context);
     return SafeArea(
       child: Scaffold(
           appBar: AppBar(
             backgroundColor: const Color.fromARGB(255, 76, 141, 95),
-            title: const Text("Details"),
+            title: const Text("Home"),
             actions: [
-              Row(
-                children: [
-                  Stack(
-                    children: [
-                      Positioned(
-                        bottom: 24,
-                        child: Container(
-                            child: const Text(
-                              "8",
-                              style: TextStyle(
-                                  color: Color.fromARGB(255, 0, 0, 0)),
-                            ),
-                            padding: const EdgeInsets.all(5),
-                            decoration: const BoxDecoration(
-                                color: Color.fromARGB(211, 164, 255, 193),
-                                shape: BoxShape.circle)),
-                      ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: const Icon(Icons.add_shopping_cart),
-                      ),
-                    ],
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(right: 12),
-                    child: Text("\$ 128"),
-                  )
-                ],
-              )
+              Row(children: [
+                Stack(
+                  children: [
+                    Positioned(
+                      bottom: 24,
+                      child: Container(
+                          child: Text(
+                            "${data.selectedItems.length}",
+                            style: const TextStyle(
+                                color: Color.fromARGB(255, 0, 0, 0)),
+                          ),
+                          padding: const EdgeInsets.all(5),
+                          decoration: const BoxDecoration(
+                              color: Color.fromARGB(211, 164, 255, 193),
+                              shape: BoxShape.circle)),
+                    ),
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Icons.add_shopping_cart),
+                    ),
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 12),
+                  child: Text("\$ ${data.totalPrice}"),
+                ),
+              ]),
             ],
           ),
           body: SingleChildScrollView(
